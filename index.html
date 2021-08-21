@@ -1,25 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Planes</title>
+  <title>Shooting Airplanes</title>
 </head>
-<body>
+<body onload="start();">
+
   <div class="main-div">
     <div class="main-content">
-      <div class="rule-div">
-        <button id="rule-button"></button><br>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-      </div>
-      <div class="canvas-div">
-        <canvas id="myCanvas" width="500px" height="500px"></canvas>
+      <br><img src="IC-playGame.png" id="IC-playGame" onclick="clickPlay();">
+      <div id="canvas-div">
+        <div id="instruction">
+          <span id="ins-text">Let's design your airplanes</span>
+        </div>
+        <canvas id="planesCanvas" width="550px" height="550px"></canvas>
+        <img src="IC-runGame.png" id="IC-runGame" onclick="selectedPlanes();">
+        <img src="IC-delete.png" id="IC-delete" onclick="deletePlanes();">
+        <div id="canvas-empty"></div>
+        <canvas id="myCanvas" width="550px" height="550px"></canvas>
       </div>
     </div>
     </div>
   </div>
 </body>
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </html>

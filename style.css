@@ -1,35 +1,118 @@
 * {
   padding: 0;
   margin: 0;
+  border: 0;
 }
 body {
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  background-image: url('galaxy.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 .main-div {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-color: #ccc;
   display: inline-block;
   text-align: center;
 }
 .rule-div {
   width: 300px;
-  height: 500px;
+  height: 100vh;
   background-color: blue;
   display: inline-block;
   text-align: center;
-  margin-top: 100px;
   overflow: hidden;
-
+  display: none;
 }
-.canvas-div {
-  width: 1000px;
-  height: 500px;
-  background-color: green;
+
+#rule-button {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+#canvas-div {
+  width: 1200px;
+  height: 670px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#IC-playGame {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+#instruction {
+  width: 80%;
+  height: 70px;
+  display: inline-block;
+  display: none;
+  margin-top: 10px;
+}
+#instruction span {
+  color: white;
+  font-family: Courier New;
+  font-size: 50px;
+  line-height: 70px;
+}
+#planesCanvas {
+  background-color: #F4F4D9;
+  border: 2px solid black;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
+  display: none;
+}
+#selected-div {
+  background-color: red;
   display: inline-block;
   text-align: center;
-  overflow: hidden;
+  overflow: none;
+}
+#IC-delete {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin-left: 20px;
+  display: none;
+}
+#IC-runGame {
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  position: fixed;
+  top: 40%;
+  -webkit-transform:rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  display: none;
+}
+#canvas-empty {
+  width: 1px;
+  height: 400px;
+  opacity: 0.3;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-105%);
+  margin: 0px 20px;
+  display: none;
+}
+#myCanvas {
+  background-color: #F4F4D9;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-top: 30px;
+  display: none;
 }
